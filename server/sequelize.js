@@ -3,7 +3,7 @@ const UsersModel = require('./models/user')
 const MessagesModel = require('./models/message')
 
 
-const sequelize = new Sequelize('testdb', 'root', '123456', {
+const sequelize = new Sequelize('testdb', 'root', '12345', {
   host: 'localhost',
   dialect: 'mysql',
   pool: {

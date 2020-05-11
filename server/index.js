@@ -1,6 +1,7 @@
 const express = require('express')
 const bodyParser = require('body-parser')
-const {Subscribers} = require('./sequelize')
+const socket = require("socket.io")
+const {Users, Messages} = require('./sequelize')
 const cors = require("cors");
 
 const app = express();
@@ -13,7 +14,7 @@ app.use(cors(corsOptions));
 
 app.use(bodyParser.json())
 
-// create a sub
+/* create a sub
 app.post('/api/subs', (req, res) => {
     console.log(req.body)
     Subscribers.create(req.body)
@@ -70,7 +71,7 @@ app.put('/api/subs/postalCode/:postalCode?', (req, res) => {
   Blog.update(req.body, {
     where: { postalCode: id }
   })
-})
+})*/
 
 const port = 3000
 app.listen(port, () => {
