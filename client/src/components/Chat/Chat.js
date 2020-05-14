@@ -12,7 +12,7 @@ const Chat = ({location}) => {
         const {name, room} = queryString.parse(location.search);
 
         console.log(name, room);
-        
+
         socket = io(ENDPOINT);
         setName(name);
 

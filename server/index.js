@@ -14,9 +14,11 @@ const defaultRoom = "room 1";
 app.use(cors());
 
 io.on('connect', (socket) => {
-  socket.on('join', ({ name }, callback) => {
-    
-    const { error, user } = addUser({ id: socket.id, name, defaultRoom });
+  socket.on('join', ({ name, room }, callback) => {
+
+    const { error, user } = addUser({ id: socket.id, name, room });
+
+    console.log(name + ", " + room)
 
     if(error) return callback(error);
 
