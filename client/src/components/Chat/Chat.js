@@ -6,7 +6,7 @@ let socket;
 const Chat = ({location}) => {
     const[name, setName]= useState('');
     const[room, setRoom]= useState('')
-    const ENDPOINT = 'localhost:3000';
+    const ENDPOINT = 'localhost:3001';
 
     useEffect(() => {
         const {name, room} = queryString.parse(location.search);
