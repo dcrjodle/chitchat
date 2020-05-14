@@ -4,7 +4,7 @@ import React from 'react';
 
 import './InfoBar.css';
 
-const InfoBar = ({name}) =>{
+const infoBar = ({name}) =>(
 <div className="InfoBar">
     <div className='leftInnerContainer'>
         <img className='onlineIcon' src={onlineIcon} alt="online image"> </img>
@@ -14,6 +14,6 @@ const InfoBar = ({name}) =>{
         <a href="/"> <img src={closeIcon} alt="close image"></img></a>
     </div>
 </div>
-}
+)
 
 export default InfoBar;
