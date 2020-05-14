@@ -5,18 +5,18 @@ import io from 'socket.io-client';
 let socket;
 const Chat = ({location}) => {
     const[name, setName]= useState('');
-    //const[room, setRoom]= useState('')
+    const[room, setRoom]= useState('')
     const ENDPOINT = 'localhost:3000';
 
     useEffect(() => {
-        const {name} = queryString.parse(location.search);
+        const {name, room} = queryString.parse(location.search);
 
-        console.log(name);
+        console.log(name, room);
         
         socket = io(ENDPOINT);
         setName(name);
 
-        socket.emit('join', {name}, ()=>{
+        socket.emit('join', {name, room}, ()=>{
 
         });
 
