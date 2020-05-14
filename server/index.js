@@ -3,20 +3,20 @@ const express = require('express');
 const socketio = require('socket.io');
 const cors = require('cors');
 
-const { addUser, removeUser, getUser, getUsersInRoom } = require('./users');
-
-const router = require('./router');
+const { addUser, removeUser, getUser, getUsersInRoom } = require('./models/users');
 
 const app = express();
 const server = http.createServer(app);
 const io = socketio(server);
 
+const defaultRoom = "room 1";
+
 app.use(cors());
-app.use(router);
 
 io.on('connect', (socket) => {
-  socket.on('join', ({ name, room }, callback) => {
-    const { error, user } = addUser({ id: socket.id, name, room });
+  socket.on('join', ({ name }, callback) => {
+    
+    const { error, user } = addUser({ id: socket.id, name, defaultRoom });
 
     if(error) return callback(error);
 
