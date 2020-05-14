@@ -23,7 +23,10 @@ const Chat = ({location}) => {
         //console.log(socket);
     }, [ENDPOINT, location.search])
     return (
-        <h1>Chat</h1>
+        <div className="generalOuter">
+            <h1 className="heading">Chat</h1>
+            <div className="general">hejsAN</div>
+        </div>
     )
 }
 

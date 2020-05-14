@@ -1,0 +1,36 @@
+html, body {
+    font-family: 'Tahoma', 'Roboto', sans-serif;
+    padding: 0;
+    margin: 0;
+  }
+  
+  #root {
+    height: 100vh;
+  }
+  
+  * {
+    box-sizing: border-box;
+  }
+
+  .general{
+    background-color: red;
+    color:red;
+  }
+  
+  .generalOuter {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    height: 100vh;
+    align-items: center;
+    background-color: #303030;
+  }
+  
+
+  .heading {
+    color: white;
+    font-size: 2.5em;
+    padding-bottom: 10px;
+    border-bottom: 2px solid white;
+    text-shadow: 4px 9px 7px #000000;
+  }
