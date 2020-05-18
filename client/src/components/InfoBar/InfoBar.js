@@ -6,7 +6,7 @@ import './InfoBar.css';
 const InfoBar = ({name}) =>(
 <div className="InfoBar">
     <div className='leftInnerContainer'>
-        <h3>Welcome {name} !</h3>
+        <h3>Welcome {name}!</h3>
     </div>
     <div className='rightInnerContainer'>
     </div>

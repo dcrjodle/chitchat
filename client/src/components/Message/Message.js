@@ -13,7 +13,7 @@ const Message = ({ message, name}) => {
         isSentBycurrentUser = true;
     }
 
-    return {
+    return (
         isSentBycurrentUser
            ? (
             <div className="messageContainer justifyEnd">
@@ -32,7 +32,7 @@ const Message = ({ message, name}) => {
             </div>
 
             )
-    }
+    )
 }
 
 export default Messages;

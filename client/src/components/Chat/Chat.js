@@ -1,4 +1,6 @@
 import React, {useState, useEffect} from 'react';
+
+import {Link} from 'react-router-dom';
 import queryString from 'query-string';
 import io from 'socket.io-client';
 import './Chat.css';
@@ -62,14 +64,28 @@ const Chat = ({location}) => {
 
     return (
         <div className="generalOuter">
-            <h1 className="heading">Chat</h1>
+            <h1 className="heading">Chat {room} !</h1>
             <div className="general">
                 <InfoBar name={name}/>
             <Input message ={message} setMessage={setMessage} sendMessage={sendMessage}/>
             </div>
-            <TextContainer users={users}>
-             
-            </TextContainer>
+
+           <Link onClick = {(event) => setRoom("AFK")} to={`/chat?name=${name}&room=${room}`} >
+           <div className="space"></div>
+           <button className="button mt-20" type="submit"> AFK </button>
+           </Link>
+           <Link onClick = {(event) => setRoom("Dirtytalk")} to={`/chat?name=${name}&room=${room}`} >
+           <div className="space"></div>
+           <button className="button mt-20" type="submit">Dirtytalk</button>
+           </Link>
+           <Link onClick = {(event) => setRoom("Memeroom")} to={`/chat?name=${name}&room=${room}`} >
+           <div className="space"></div>
+           <button className="button mt-20" type="submit">Memeroom</button>
+           </Link>
+           <Link onClick = {(event) => setRoom("Random")} to={`/chat?name=${name}&room=${room}`} >
+           <div className="space"></div>
+           <button className="button mt-20" type="submit">Random</button>
+           </Link>
         </div>
     )
 }
