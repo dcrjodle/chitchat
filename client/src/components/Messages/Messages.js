@@ -2,10 +2,10 @@ import React from 'react';
 
 import ScrollToBottom from 'react-scroll-to-bottom'
 
-import "./Message.css";
+import "./Messages.css";
 
 const Input = ({ message, setMessage, sendMessage}) => {
 
 }
 
-export default Message;
+export default Messages;

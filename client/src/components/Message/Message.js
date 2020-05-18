@@ -2,9 +2,9 @@ import React from 'react';
 
 import ScrollToBottom from 'react-scroll-to-bottom'
 
-import "./Messages.css";
+import "./Message.css";
 
-const Message = ({ message, name}) => {
+const Message = ( {message: { user, text}, name}) => {
     let isSentBycurrentUser = false;
 
     const trimmedName = name.trim().toLowerCase();
@@ -13,7 +13,7 @@ const Message = ({ message, name}) => {
         isSentBycurrentUser = true;
     }
 
-    return {
+    return (
         isSentBycurrentUser
            ? (
             <div className="messageContainer justifyEnd">
@@ -32,7 +32,7 @@ const Message = ({ message, name}) => {
             </div>
 
             )
-    }
+    )
 }
 
-export default Messages;
+export default Message;
