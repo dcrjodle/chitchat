@@ -12,13 +12,7 @@ html, body {
     box-sizing: border-box;
   }
 
-  .general{
-    background-color: red;
-    color:red;
-  }
-  
   .generalOuter {
-    display: flex;
     justify-content: center;
     text-align: center;
     height: 100vh;
