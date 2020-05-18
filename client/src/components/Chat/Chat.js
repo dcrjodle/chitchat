@@ -68,27 +68,23 @@ const Chat = ({location}) => {
             <div className="general">
                 <InfoBar name={name}/>
             <Input message ={message} setMessage={setMessage} sendMessage={sendMessage}/>
-            </div>
-<<<<<<< HEAD
-
-           <Link onClick = {(event) => setRoom("AFK")} to={`/chat?name=${name}&room=${room}`} >
+            </div> 
+           <Link onClick = {(event) => setRoom("AFK")} to={`/chat?name=${name}&room=AFK`} >
            <div className="space"></div>
            <button className="button mt-20" type="submit"> AFK </button>
            </Link>
-           <Link onClick = {(event) => setRoom("Dirtytalk")} to={`/chat?name=${name}&room=${room}`} >
+           <Link onClick = {(event) => setRoom("Dirtytalk")} to={`/chat?name=${name}&room=Dirtytalk`} >
            <div className="space"></div>
            <button className="button mt-20" type="submit">Dirtytalk</button>
            </Link>
-           <Link onClick = {(event) => setRoom("Memeroom")} to={`/chat?name=${name}&room=${room}`} >
+           <Link onClick = {(event) => setRoom("Memeroom")} to={`/chat?name=${name}&room=Memeroom`} >
            <div className="space"></div>
            <button className="button mt-20" type="submit">Memeroom</button>
            </Link>
-           <Link onClick = {(event) => setRoom("Random")} to={`/chat?name=${name}&room=${room}`} >
+           <Link onClick = {(event) => setRoom("Random")} to={`/chat?name=${name}&room=Random`} >
            <div className="space"></div>
            <button className="button mt-20" type="submit">Random</button>
            </Link>
-=======
->>>>>>> 6275e82b6b51bcbd5c2ea445d0b1988ff2df578e
         </div>
     )
 }
