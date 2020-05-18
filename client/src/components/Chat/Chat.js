@@ -17,7 +17,7 @@ const Chat = ({location}) => {
     const[message, setMessage]= useState('');
 
 
-    const ENDPOINT = 'localhost:3000';
+    const ENDPOINT = 'https://young-beach-90877.herokuapp.com/';
 
     useEffect(() => {
         const {name, room} = queryString.parse(location.search);
