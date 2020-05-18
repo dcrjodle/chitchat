@@ -69,6 +69,7 @@ const Chat = ({location}) => {
                 <InfoBar name={name}/>
             <Input message ={message} setMessage={setMessage} sendMessage={sendMessage}/>
             </div>
+<<<<<<< HEAD
 
            <Link onClick = {(event) => setRoom("AFK")} to={`/chat?name=${name}&room=${room}`} >
            <div className="space"></div>
@@ -86,6 +87,8 @@ const Chat = ({location}) => {
            <div className="space"></div>
            <button className="button mt-20" type="submit">Random</button>
            </Link>
+=======
+>>>>>>> 6275e82b6b51bcbd5c2ea445d0b1988ff2df578e
         </div>
     )
 }
