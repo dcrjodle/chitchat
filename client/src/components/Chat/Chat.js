@@ -44,6 +44,7 @@ const Chat = ({location}) => {
     useEffect(() =>{
         socket.on('message', (message) => {
             setMessages([...messages, message]);
+            console.log(message);
 
         })
         }, [messages]);
@@ -69,22 +70,25 @@ const Chat = ({location}) => {
                 <InfoBar name={name}/>
             <Input message ={message} setMessage={setMessage} sendMessage={sendMessage}/>
             </div> 
+            <h3 className="rooms">Rooms</h3>
+            <div className="buttons">
            <Link onClick = {(event) => setRoom("AFK")} to={`/chat?name=${name}&room=AFK`} >
            <div className="space"></div>
-           <button className="button mt-20" type="submit"> AFK </button>
+           <button className="roomButton" type="submit"> AFK </button>
            </Link>
            <Link onClick = {(event) => setRoom("Dirtytalk")} to={`/chat?name=${name}&room=Dirtytalk`} >
            <div className="space"></div>
-           <button className="button mt-20" type="submit">Dirtytalk</button>
+           <button className="roomButton" type="submit">Dirtytalk</button>
            </Link>
            <Link onClick = {(event) => setRoom("Memeroom")} to={`/chat?name=${name}&room=Memeroom`} >
            <div className="space"></div>
-           <button className="button mt-20" type="submit">Memeroom</button>
+           <button className="roomButton" type="submit">Memeroom</button>
            </Link>
            <Link onClick = {(event) => setRoom("Random")} to={`/chat?name=${name}&room=Random`} >
            <div className="space"></div>
-           <button className="button mt-20" type="submit">Random</button>
+           <button className="roomButton" type="submit">Random</button>
            </Link>
+           </div>
         </div>
     )
 }
