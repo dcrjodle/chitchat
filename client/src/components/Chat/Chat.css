@@ -2,6 +2,7 @@ html, body {
     font-family: 'Tahoma', 'Roboto', sans-serif;
     padding: 0;
     margin: 0;
+    background-color: #303030;
   }
   
   #root {
@@ -40,10 +41,12 @@ html, body {
     font-size: 16px;
     margin: 4px 2px;
     transition-duration: 0.4s;
+    transition: all .2s ease-in-out; 
     cursor: pointer;
     border-radius: 1%;
     box-shadow: 4px 9px 7px #000000;
   }
+  
   .roomButton:hover{
     transform: scale(1.1);
   }

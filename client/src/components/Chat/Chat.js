@@ -41,6 +41,7 @@ const Chat = ({location}) => {
         //console.log(socket);
     }, [ENDPOINT, location.search])
 
+
     useEffect(() =>{
         socket.on('message', (message) => {
             setMessages([...messages, message]);
@@ -73,25 +74,55 @@ const Chat = ({location}) => {
             </div> 
             <h3 className="rooms">Rooms</h3>
             <div className="buttons">
-           <Link onClick = {(event) => setRoom("AFK")} to={`/chat?name=${name}&room=AFK`} >
+           <Link onClick = {clickafk} >
            <div className="space"></div>
            <button className="roomButton" type="submit"> AFK </button>
            </Link>
-           <Link onClick = {(event) => setRoom("Dirtytalk")} to={`/chat?name=${name}&room=Dirtytalk`} >
+           <Link onClick = {clickdt} >
            <div className="space"></div>
            <button className="roomButton" type="submit">Dirtytalk</button>
            </Link>
-           <Link onClick = {(event) => setRoom("Memeroom")} to={`/chat?name=${name}&room=Memeroom`} >
+           <Link onClick = {clickmr} >
            <div className="space"></div>
            <button className="roomButton" type="submit">Memeroom</button>
            </Link>
-           <Link onClick = {(event) => setRoom("Random")} to={`/chat?name=${name}&room=Random`} >
+           <Link onClick = {clickr} >
            <div className="space"></div>
            <button className="roomButton" type="submit">Random</button>
            </Link>
            </div>
         </div>
     )
+
+    function clickr(){
+
+        setRoom('Random');
+        window.location = `/chat?name=${name}&room=Random`;
+
+
+    }
+    
+    function clickmr(){
+
+        setRoom('Memeroom');
+        window.location = `/chat?name=${name}&room=Memeroom`;
+
+
+    }
+    function clickdt(){
+
+        setRoom('Dirtytalk');
+        window.location = `/chat?name=${name}&room=Dirtytalk`;
+
+
+    }
+    function clickafk(){
+
+        setRoom('AFK');
+        window.location = `/chat?name=${name}&room=AFK`;
+
+
+    }
 }
 
 export default Chat;
