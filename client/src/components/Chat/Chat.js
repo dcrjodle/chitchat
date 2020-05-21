@@ -67,11 +67,13 @@ const Chat = ({location}) => {
     return (
         <div className="generalOuter">
             <h1 className="heading">Chat {room} !</h1>
-            <div className="general">
-                <InfoBar name={name}/>
-                <Messages messages ={messages} name={name}/>
-            <Input message ={message} setMessage={setMessage} sendMessage={sendMessage}/>
-            </div> 
+            <div className="outerContainer">
+                <div className="container">
+                    <InfoBar room={room} name={name}/>
+                    <Messages messages ={messages} name={name}/>
+                    <Input message ={message} setMessage={setMessage} sendMessage={sendMessage}/>
+                </div> 
+            </div>
             <h3 className="rooms">Rooms</h3>
             <div className="buttons">
            <Link onClick = {clickafk} >
