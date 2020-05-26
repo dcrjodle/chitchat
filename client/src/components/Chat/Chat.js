@@ -7,6 +7,7 @@ import './Chat.css';
 import InfoBar from '../InfoBar/InfoBar';
 import Input from '../Input/Input';
 import Messages from '../Messages/Messages';
+import Users from '../Users/Users';
 
 
 let socket;
@@ -15,8 +16,10 @@ let socket;
 const Chat = ({location}) => {
     const[name, setName]= useState('');
     const[room, setRoom]= useState('');
+    const[id, setId]= useState('');
     const[messages, setMessages]= useState([]);
     const[message, setMessage]= useState('');
+    const[users, setUsers]= useState([]);
 
 
     const ENDPOINT = 'https://young-beach-90877.herokuapp.com/';
@@ -40,6 +43,17 @@ const Chat = ({location}) => {
 
         //console.log(socket);
     }, [ENDPOINT, location.search])
+
+    useEffect(() =>{
+        socket.on('roomData', (user)=> {
+            console.log(user.name);
+            
+            setUsers([...users, user]);
+            
+
+
+        })
+        }, [users]);
 
 
     useEffect(() =>{
@@ -93,14 +107,16 @@ const Chat = ({location}) => {
            <button className="roomButton" type="submit">Random</button>
            </Link>
            </div>
+           
+           <Users users={users} room={room}/>
         </div>
     )
 
     function clickr(){
 
-        setRoom('Random');
+        
         window.location = `/chat?name=${name}&room=Random`;
-
+        setRoom('Random');
 
     }
     
