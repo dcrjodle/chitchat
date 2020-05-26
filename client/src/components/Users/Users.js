@@ -9,7 +9,7 @@ const Users = ({users}) => {
     return (
             <div className="userList">
                 <h3>Users in room</h3>
-                {users.map((user, i) => <div key={i}><User user={user}/></div>)}
+                    {users.map((us,i) => <div key={i}><User name={us.name}/></div>)}
             </div>
 
     )

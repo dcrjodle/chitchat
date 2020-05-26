@@ -1,13 +1,12 @@
 import React from 'react';
 
-import ScrollToBottom from 'react-scroll-to-bottom'
 
 
-const User = ( {user: {id, name, room}} ) => {
+const User = ( { name } ) => {
     
     return (
     <div>
-    <p>{name} i rummet</p>
+    <p> 1. {name} i rummet</p>
     </div>
       
     )

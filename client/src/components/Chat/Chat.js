@@ -47,13 +47,12 @@ const Chat = ({location}) => {
     }, [ENDPOINT, location.search])
 
     useEffect(() =>{
-        socket.on('roomData', (user)=> {
-            console.log(user.name);
+        socket.on('roomData', (users)=> {
             
-            setUsers([...users, user]);
+            console.log('test' , users.users)
+
+            setUsers(users.users, users);
             
-
-
         })
         }, [users]);
 
@@ -110,7 +109,7 @@ const Chat = ({location}) => {
            </Link>
            </div>
            
-           <Users users={users} room={room}/>
+           <Users users={users}/>
         </div>
     )
 
@@ -118,10 +117,7 @@ const Chat = ({location}) => {
 
         
         window.location = `/chat?name=${name}&room=Random`;
-<<<<<<< HEAD
         setRoom('Random');
-=======
->>>>>>> 4285df2dd5ebbc81d774418cd1a51580b0407575
 
     }
     
