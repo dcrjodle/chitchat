@@ -21,6 +21,7 @@ const Chat = ({location}) => {
 
     const ENDPOINT = 'https://young-beach-90877.herokuapp.com/';
 
+
     useEffect(() => {
         const {name, room} = queryString.parse(location.search);
 
@@ -28,6 +29,7 @@ const Chat = ({location}) => {
 
         socket = io(ENDPOINT);
         setName(name);
+        setRoom(room);
 
         socket.emit('join', {name, room}, ()=>{
 
@@ -66,16 +68,16 @@ const Chat = ({location}) => {
 
     return (
         <div className="generalOuter">
-            <h1 className="heading">Chat {room} !</h1>
+            <h1 className="heading">ChitChat</h1>
             <div className="outerContainer">
                 <div className="container">
-                    <InfoBar room={room} name={name}/>
-                    <Messages messages ={messages} name={name}/>
+                    <InfoBar room={room} />
+                    <Messages className="messages" messages ={messages} name={name}/>
                     <Input message ={message} setMessage={setMessage} sendMessage={sendMessage}/>
                 </div> 
             </div>
             <h3 className="rooms">Rooms</h3>
-            <div className="buttons">
+            <div className="roomButtons">
            <Link onClick = {clickafk} >
            <div className="space"></div>
            <button className="roomButton" type="submit"> AFK </button>
@@ -101,13 +103,13 @@ const Chat = ({location}) => {
         setRoom('Random');
         window.location = `/chat?name=${name}&room=Random`;
 
-
     }
     
     function clickmr(){
 
         setRoom('Memeroom');
         window.location = `/chat?name=${name}&room=Memeroom`;
+        
 
 
     }

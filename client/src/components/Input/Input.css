@@ -5,7 +5,7 @@ input {
   border-radius: 0;
   padding: 5%;
   width: 80%;
-  font-size: 1.2em;
+  font-size: 16px;
 }
 
 form {
@@ -14,21 +14,25 @@ form {
 }
 
 button {
-  border-top-right-radius: 10px;
-  border-bottom-right-radius: 10px; 
-  border-radius: 10px;
   /*padding: 10px; */
-  font-weight: 700;
+  font-weight: 500;
   display: inline-block;
   color: white;
   background-color: orange;
   border: none;
-  padding: 20px;
-  margin-top: 10px; 
-  margin-bottom: 10px;
+  padding-left: 53px;
+  padding-right: 53px;
+}
+
+.sendButton {
+  font-size: 16px;
+}
+
+.sendButton:hover {
+  background-color: darkorange;
 }
 
 button:hover {
-  background-color: gray;
+  background-color: darkblue;
   cursor: pointer;
 }
