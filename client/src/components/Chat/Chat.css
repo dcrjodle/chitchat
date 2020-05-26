@@ -69,8 +69,8 @@ html, body {
     text-shadow: 4px 9px 7px #000000;
   }
 
-  .roomButton{
-    background-color: #2979FF;; /* Green */
+  .roomButton, .generalButton{
+    background-color: rgb(105, 135, 187);
     border: none;
     color: white;
     padding: 16px 32px;
@@ -82,12 +82,17 @@ html, body {
     transition-duration: 0.4s;
     transition: all .2s ease-in-out; 
     cursor: pointer;
-    border-radius: 5px;
+    border-radius: 100px;
     box-shadow: 4px 9px 7px #000000;
   }
+
+
+  .generalButton {
+    margin: 0px 0px 20px 2px;
+  }
   
-  .roomButton:hover{
-    transform: scale(1.1);
+  .roomButton:hover, .generalButton:hover{
+    background-color: rgb(78, 101, 139);
   }
 
   .roomButtons{

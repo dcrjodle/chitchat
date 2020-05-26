@@ -90,35 +90,45 @@ const Chat = ({location}) => {
                 </div> 
             </div>
             <h3 className="rooms">Rooms</h3>
+            <Link onClick = {clickgen} >
+                <div className="space"></div>
+                <button className="generalButton" id="0" type="submit"> General </button>
+            </Link>
             <div className="roomButtons">
-           <Link onClick = {clickafk} >
-           <div className="space"></div>
-           <button className="roomButton" type="submit"> AFK </button>
-           </Link>
-           <Link onClick = {clickdt} >
-           <div className="space"></div>
-           <button className="roomButton" type="submit">Dirtytalk</button>
-           </Link>
-           <Link onClick = {clickmr} >
-           <div className="space"></div>
-           <button className="roomButton" type="submit">Memeroom</button>
-           </Link>
-           <Link onClick = {clickr} >
-           <div className="space"></div>
-           <button className="roomButton" type="submit">Random</button>
-           </Link>
+                <Link onClick = {clickafk} >
+                    <div className="space"></div>
+                    <button className="roomButton" id="1" type="submit"> AFK </button>
+                </Link>
+                <Link onClick = {clickdt} >
+                    <div className="space"></div>
+                    <button className="roomButton" id="2" type="submit">Dirtytalk</button>
+                </Link>
+                <Link onClick = {clickmr} >
+                    <div className="space"></div>
+                    <button className="roomButton" id="3" type="submit">Memeroom</button>
+                </Link>
+                <Link onClick = {clickr} >
+                    <div className="space"></div>
+                    <button className="roomButton" id="4" type="submit">Random</button>
+                </Link>
            </div>
            
            <Users users={users}/>
         </div>
     )
 
+     
+
+    function clickgen(){
+
+        setRoom('General');
+        window.location = `/chat?name=${name}&room=General`;
+    }
+
     function clickr(){
 
         
         window.location = `/chat?name=${name}&room=Random`;
-        setRoom('Random');
-
     }
     
     function clickmr(){

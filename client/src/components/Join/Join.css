@@ -44,8 +44,8 @@ html, body {
   .button {
       color: #fff !important;
       text-decoration: none;
-      background: #2979FF;
-      padding: 20px;
+      background-color: rgb(255, 153, 0);
+      padding: 18px;
       display: inline-block;
       border: none;
       width: 100%;
@@ -55,12 +55,12 @@ html, body {
   }
 
   .button:hover {
-      background-color: #2463CD;
+      background-color: rgb(206, 117, 0);
       cursor: pointer;
     }
 
   .button:active {
-    background-color: #2463CD;
+    background-color: rgb(0, 165, 41);
     box-shadow: 0 5px 3px #000;
     transform: translateY(4px);
   }
@@ -68,7 +68,8 @@ html, body {
 
   .mt-20 {
     margin-top: 20px;
-    font-size: 18px;
+    font-size: 16px;
+    font-weight: 600;
   }
   
   @media (min-width: 320px) and (max-width: 480px) {
