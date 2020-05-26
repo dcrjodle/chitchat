@@ -1,10 +1,11 @@
 .messageBox {
   background: #F3F3F3;
   border-radius: 20px;
-  padding: 5px 20px;
+  padding: 0px 20px 0px 20px;
   color: white;
   display: inline-block;
   max-width: 80%;
+  margin: 10px 0px 10px 5px;
 }
 
 .messageText {
@@ -59,7 +60,7 @@
 }
 
 .backgroundBlue {
-  background: #2979FF;
+  background: rgb(105, 135, 187);
 }
 
 .backgroundLight {
