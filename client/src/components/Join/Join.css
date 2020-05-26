@@ -43,7 +43,6 @@ html, body {
   
   .button {
       color: #fff !important;
-      text-transform: uppercase;
       text-decoration: none;
       background: #2979FF;
       padding: 20px;
@@ -52,6 +51,7 @@ html, body {
       width: 100%;
       box-shadow: 4px 9px 7px #000000;
       font-family: 'Tahoma', 'Roboto', sans-serif;
+      border-radius: 5px;
   }
 
   .button:hover {
@@ -68,6 +68,7 @@ html, body {
 
   .mt-20 {
     margin-top: 20px;
+    font-size: 18px;
   }
   
   @media (min-width: 320px) and (max-width: 480px) {
