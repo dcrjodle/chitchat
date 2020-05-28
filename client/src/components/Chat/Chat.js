@@ -88,6 +88,7 @@ const Chat = ({location}) => {
                     <Messages className="messages" messages ={messages} name={name}/>
                     <Input message ={message} setMessage={setMessage} sendMessage={sendMessage}/>
                 </div> 
+                <Users users={users}/>
             </div>
             <h3 className="rooms">Rooms</h3>
             <Link onClick = {clickgen} >
@@ -113,7 +114,7 @@ const Chat = ({location}) => {
                 </Link>
            </div>
            
-           <Users users={users}/>
+           
         </div>
     )
 
