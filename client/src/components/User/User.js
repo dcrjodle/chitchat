@@ -1,12 +1,12 @@
 import React from 'react';
 
-
+import "./User.css";
 
 const User = ( { name } ) => {
     
     return (
-    <div className="room">
-    <p> {name} is in this room</p>
+    <div className="inThisRoom">
+    <p> {name}</p>
     </div>
       
     )

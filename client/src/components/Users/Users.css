@@ -1,3 +1,14 @@
 .userList{
-    background-color: tan ;
+    background-color:white;
+    margin-left: 3%;
+    width: 15%;;
+}
+
+.userList h3{
+    background-color:rgb(255, 174, 0); 
+    padding: 5%;
+    margin-top: -2%;;
+    color: white;
+    
+
 }
