@@ -117,12 +117,13 @@ const Chat = ({location}) => {
            <div className="newRoom">
            <div><input placeholder="Enter the roomname...." className="joinInput" type="text" onChange={(event) => setRoom(event.target.value)}></input></div>
            <div className="space"></div>
-           </div>
+           
            <Link onClick={clicknew}>
 
            <button className="button mt-20" type="submit">Join</button>
            
            </Link>
+           </div>
            
            
         </div>
