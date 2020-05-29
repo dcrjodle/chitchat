@@ -113,6 +113,16 @@ const Chat = ({location}) => {
                     <button className="roomButton" id="4" type="submit">Random</button>
                 </Link>
            </div>
+           <h3>Join room</h3>
+           <div className="newRoom">
+           <div><input placeholder="Enter the roomname...." className="joinInput" type="text" onChange={(event) => setRoom(event.target.value)}></input></div>
+           <div className="space"></div>
+           </div>
+           <Link onClick={clicknew}>
+
+           <button className="button mt-20" type="submit">Join</button>
+           
+           </Link>
            
            
         </div>
@@ -151,6 +161,14 @@ const Chat = ({location}) => {
 
         setRoom('AFK');
         window.location = `/chat?name=${name}&room=AFK`;
+
+
+    }
+
+    function clicknew(){
+
+    
+        window.location = `/chat?name=${name}&room=${room}`;
 
 
     }
