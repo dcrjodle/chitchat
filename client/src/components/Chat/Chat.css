@@ -1,116 +1,136 @@
-html, body {
-    font-family: 'Tahoma', 'Roboto', sans-serif;
-    padding: 0;
-    margin: 0;
-    background-color: #303030;
-  }
-  .newRoom{
+html,
+body {
+  font-family: "Tahoma", "Roboto", sans-serif;
+  padding: 0;
+  margin: 0;
+  background-color: #303030;
+}
+.newRoom {
   width: 50%;
   margin-left: 25%;
 }
-  
-  #root {
-    height: 100vh;
-  }
-  
-  * {
-    box-sizing: border-box;
-  }
 
-  .generalOuter {
-    justify-content: center;
-    text-align: center;
-    height: 100vh;
-    align-items: center;
-    background-color: #303030;
-  }
-  
-  .outerContainer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 90vh;
-    background-color: #303030;
-  }
+#root {
+  height: 100vh;
+}
 
-  .room {
-    color: black;
-    font-family: 'Comic sans';
-  }
+* {
+  box-sizing: border-box;
+}
 
+.generalOuter {
+  justify-content: center;
+  text-align: center;
+  height: 100vh;
+  align-items: center;
+  background-color: #303030;
+}
+
+.outerContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 90vh;
+  background-color: #303030;
+}
+
+.room {
+  color: black;
+  font-family: "Comic sans";
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: white;
+  height: 80%;
+  width: 50%;
+}
+
+.messages {
+  font-size: 16px;
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
   .container {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    background: white;
-    height: 80%;
-    width: 50%;
+    width: 100%;
+    height: 100%;
   }
+}
 
-  .messages {
-    font-size: 16px;
+@media (min-width: 480px) and (max-width: 1200px) {
+  .container {
+    width: 60%;
   }
+}
 
-  @media (min-width: 320px) and (max-width: 480px) {
-    .container {
-      width: 100%;
-      height: 100%;
-    }
-  }
+.heading {
+  color: white;
+  font-size: 2.5em;
+  padding-bottom: 10px;
+  border-bottom: 2px solid white;
+  text-shadow: 4px 9px 7px #000000;
+}
 
-  @media (min-width: 480px) and (max-width: 1200px) {
-    .container {
-      width: 60%;
-    }
-  }
+.roomButton,
+.generalButton {
+  background-color: rgb(105, 135, 187);
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 0px 2px 0px 2px;
+  transition-duration: 0.4s;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+  border-radius: 100px;
+  box-shadow: 4px 9px 7px #000000;
+}
 
+.generalButton {
+  margin: 0px 0px 20px 2px;
+}
 
-  .heading {
-    color: white;
-    font-size: 2.5em;
-    padding-bottom: 10px;
-    border-bottom: 2px solid white;
-    text-shadow: 4px 9px 7px #000000;
-  }
+.roomButton:hover,
+.generalButton:hover {
+  background-color: rgb(78, 101, 139);
+}
 
-  .roomButton, .generalButton{
-    background-color: rgb(105, 135, 187);
-    border: none;
-    color: white;
-    padding: 16px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 0px 2px 0px 2px;
-    transition-duration: 0.4s;
-    transition: all .2s ease-in-out; 
-    cursor: pointer;
-    border-radius: 100px;
-    box-shadow: 4px 9px 7px #000000;
-  }
+.roomButtons {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  width: 40%;
+  margin: auto;
+}
 
+.rooms {
+  color: white;
+  font-size: 2.3em;
+  padding-bottom: 10px;
+  text-shadow: 4px 9px 7px #000000;
+}
 
-  .generalButton {
-    margin: 0px 0px 20px 2px;
-  }
-  
-  .roomButton:hover, .generalButton:hover{
-    background-color: rgb(78, 101, 139);
-  }
+.joinRoom {
+  color: white;
+}
 
-  .roomButtons{
-    display: grid;
-    grid-template-columns: auto auto auto auto;
-    width: 40%;
-    margin: auto;
-    margin-bottom: 10%;
-    
-  }
+.newRoom {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10vh;
+}
 
-  .rooms{
-    color: white;
-    font-size: 2.3em;
-    padding-bottom: 10px;
-    text-shadow: 4px 9px 7px #000000;
-  }
+.newRoom .mt-20 {
+  margin-top: 0px;
+  margin-left: 15px;
+  padding: 15px 10px 15px 10px;
+  background-color: rgb(105, 135, 187);
+}
+
+.newRoom .mt-20:hover {
+  background-color: rgb(78, 101, 139);
+}
