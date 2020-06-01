@@ -79,6 +79,7 @@ const Chat = ({ location }) => {
             General{" "}
           </button>
         </Link>
+        <div className="roomButtonWrapper"></div>
         <div className="roomButtons">
           <Link onClick={clickafk}>
             <div className="space"></div>

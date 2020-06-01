@@ -83,12 +83,16 @@ body {
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
-  margin: 0px 2px 0px 2px;
   transition-duration: 0.4s;
   transition: all 0.2s ease-in-out;
   cursor: pointer;
   border-radius: 100px;
   box-shadow: 4px 9px 7px #000000;
+}
+
+.roomButton {
+  grid-template-rows: 100vh;
+  justify-content: center;
 }
 
 .generalButton {
@@ -102,15 +106,16 @@ body {
 
 .roomButtons {
   display: grid;
-  grid-template-columns: auto auto auto auto;
+  grid-template-columns: 100px 150px 150px 150px;
+  justify-content: center;
   width: 40%;
-  margin: auto;
+  margin: 0 auto;
 }
 
 .rooms {
   color: white;
   font-size: 2.3em;
-  padding-bottom: 10px;
+  padding-bottom: 0px;
   text-shadow: 4px 9px 7px #000000;
 }
 

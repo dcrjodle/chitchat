@@ -10,7 +10,7 @@ input {
 
 form {
   display: flex;
-  border-top: 1px solid #D3D3D3;
+  border-top: 1px solid #d3d3d3;
 }
 
 button {
@@ -20,12 +20,11 @@ button {
   color: white;
   background-color: orange;
   border: none;
-  padding-left: 53px;
-  padding-right: 53px;
 }
 
 .sendButton {
   font-size: 16px;
+  flex: 3;
 }
 
 .sendButton:hover {
