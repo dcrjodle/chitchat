@@ -2,6 +2,7 @@
     background-color:white;
     margin-left: 3%;
     width: 15%;;
+    font-size: small;
 }
 
 .userList h3{
@@ -9,6 +10,7 @@
     padding: 5%;
     margin-top: -2%;;
     color: white;
+    font-size: medium;
     
 
 }
